@@ -7,6 +7,34 @@
 # Emended by Benjamin des Gachons and Patrick Chew : <http://www.fitima.org/docs/fiche.pdf>
 
 fr:
+  member:
+    index:
+      title: "Liste des membres"
+    group: "Groupe"
+    name: "Nom"
+    firstname: "Prénom"
+    adress: "Adresse"
+    zip_code: "Code postal"
+    city: "Ville"
+    phone: "Téléphone"
+    birth_date: "Date de naissance"
+    subscribe_date: "Date d'inscription"
+    new: "Ajouter un nouveau membre"
+    edit: "Editer un membre"
+    create:
+      ok: "Le membre a été créé avec succès !"
+    update:
+      ok: "Le membre a été mis à jour avec succès !"
+  view:
+    show: "Voir"
+    edit: "Editer"
+    destroy: "Supprimer"
+    are_you_sure: "Etes-vous sûr ?"
+    back: "Retour"
+    error: "erreur"
+    error_message:
+      one: "est intervenue durant le traitement des données"
+      other: "sont intervenues durant le traitement des données"
   date:
     formats:
       default: "%d/%m/%Y"
