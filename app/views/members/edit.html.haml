@@ -1,0 +1,5 @@
+%h3= t 'member.edit'
+= render 'form', :action => "edit"
+= link_to t('view.show'), @member
+|
+= link_to t('view.back'), members_path
