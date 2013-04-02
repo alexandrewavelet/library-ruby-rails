@@ -1,0 +1,35 @@
+%h3= t 'member.index.title'
+%table.table.table-striped
+  %tr
+    %th= t 'member.group'
+    %th= t 'member.name'
+    %th= t 'member.firstname'
+    %th= t 'member.adress'
+    %th= t 'member.zip_code'
+    %th= t 'member.city'
+    %th= t 'member.phone'
+    %th= t 'member.birth_date'
+    %th= t 'member.subscribe_date'
+    %th
+    %th
+    %th
+  - @members.each do |member|
+    %tr
+      %td
+        - if member.isAdult?
+          Adultes
+        - else
+          Jeunes
+      %td= member.name
+      %td= member.firstname
+      %td= member.adress
+      %td= member.zip_code
+      %td= member.city
+      %td= member.phone
+      %td= member.birth_date.strftime("%d-%m-%Y")
+      %td= member.subscribe_date
+      %td= link_to t('view.show'), member
+      %td= link_to t('view.edit'), edit_member_path(member)
+      %td= link_to t('view.destroy'), member, method: :delete, data: { confirm: t('view.are_you_sure') }
+%br
+= link_to t('member.new'), new_member_path

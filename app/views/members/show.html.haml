@@ -1,0 +1,31 @@
+%p#notice= notice
+%p
+  %b= t 'member.name'
+  = @member.name
+%p
+  %b= t 'member.firstname'
+  = @member.firstname
+%p
+  %b= t 'member.adress'
+  = @member.adress
+%p
+  %b= t 'member.zip_code'
+  = @member.zip_code
+%p
+  %b= t 'member.city'
+  = @member.city
+%p
+  %b= t 'member.phone'
+  = @member.phone
+%p
+  %b= t 'member.birth_date'
+  = @member.birth_date.strftime("%d-%m-%Y")
+%p
+  %b= t 'member.subscribe_date'
+  = @member.subscribe_date
+%p
+  - if @member.isAdult?
+    = link_to 'Valider nouvelle cotisation de 5€', members_path, :class => 'btn', data: { confirm: t('view.are_you_sure') }
+= link_to t('view.edit'), edit_member_path(@member)
+|
+= link_to t('view.back'), members_path

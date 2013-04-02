@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.8'
 
@@ -6,7 +6,6 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,6 +21,8 @@ end
 
 gem 'jquery-rails'
 gem 'haml'
+gem 'haml-rails'
+gem 'twitter-bootstrap-rails', :git => 'https://github.com/toadkicker/twitter-bootstrap-rails' # for Windows
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

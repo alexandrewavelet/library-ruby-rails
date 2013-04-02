@@ -1,0 +1,39 @@
+= form_for(@member) do |f|
+  - if @member.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@member.errors.count, t('view.error'))
+        = t 'view.error_message', :count => @member.errors.count
+      %ul
+        - @member.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name, t('member.name')
+    %br
+    = f.text_field :name
+  .field
+    = f.label :firstname, t('member.firstname')
+    %br
+    = f.text_field :firstname
+  .field
+    = f.label :adress, t('member.adress')
+    %br
+    = f.text_field :adress
+  .field
+    = f.label :zip_code, t('member.zip_code')
+    %br
+    = f.text_field :zip_code
+  .field
+    = f.label :city, t('member.city')
+    %br
+    = f.text_field :city
+  .field
+    = f.label :phone, t('member.phone')
+    %br
+    = f.text_field :phone
+  .field
+    = f.label :birth_date, t('member.birth_date')
+    %br
+    = f.date_select :birth_date, :start_year => 1900, :end_year => Time.now.year
+  .actions
+    = f.submit t("member.#{action}"), :class => "btn"
